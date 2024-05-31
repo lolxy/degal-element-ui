@@ -282,7 +282,7 @@
 </style>
 <template>
   <div class="headerWrapper">
-    <div id="v3-banner" v-if="isHome">
+    <!-- <div id="v3-banner" v-if="isHome">
       <template v-if="lang === 'zh-CN'">
         您正在浏览基于 Vue 2.x 的文档;
         <a href="https://element-plus.org/#/zh-CN">点击查看 Vue 3.x 版本。</a>
@@ -293,7 +293,7 @@
         You’re browsing the documentation of Element UI for Vue 2.x version.
         <a href="https://element-plus.org">Click here</a> for Vue 3.x version
       </template>
-    </div>
+    </div> -->
     <header class="header" ref="header">
       <div class="container">
         <h1><router-link :to="`/${ lang }`">
@@ -328,7 +328,7 @@
               :to="`/${ lang }/component`">{{ langConfig.components }}
             </router-link>
           </li>
-          <li
+          <!-- <li
             class="nav-item nav-item-theme"
           >
             <router-link
@@ -342,7 +342,7 @@
               :to="`/${ lang }/resource`"
               exact>{{ langConfig.resource }}
             </router-link>
-          </li>
+          </li> -->
 
           <!-- gap -->
           <li class="nav-item" v-show="isComponentPage">
