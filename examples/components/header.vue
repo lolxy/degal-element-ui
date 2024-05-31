@@ -44,11 +44,14 @@
       float: left;
       font-size: 32px;
       font-weight: normal;
+      height: 100%;
 
       a {
         color: #333;
         text-decoration: none;
-        display: block;
+        display: flex;
+        align-items: center;
+        height: 100%;
       }
 
       span {
@@ -100,6 +103,7 @@
     .nav-logo,
     .nav-logo-small {
       vertical-align: sub;
+      height: 50px;
     }
 
     .nav-logo-small {
@@ -300,11 +304,11 @@
           <!-- logo -->
           <slot>
             <img
-              src="../assets/images/element-logo.svg"
+              src="../assets/images/logo.png"
               alt="element-logo"
               class="nav-logo">
             <img
-              src="../assets/images/element-logo-small.svg"
+              src="../assets/images/logo-small.png"
               alt="element-logo"
               class="nav-logo-small">
           </slot>
