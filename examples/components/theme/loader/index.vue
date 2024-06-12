@@ -42,34 +42,34 @@ export default {
       this.lastApply = time;
     },
     onDownload(themeConfig, themeName) {
-      this.triggertProgressBar(true);
-      updateVars(
-        Object.assign({}, themeConfig, { download: true }),
-        xhr => {
-          xhr.responseType = 'blob';
-        }
-      ).then()
-        .catch((err) => {
-          this.onError(err);
-        })
-        .then(() => {
-          this.triggertProgressBar(false);
-        });
+    //   this.triggertProgressBar(true);
+    //   updateVars(
+    //     Object.assign({}, themeConfig, { download: true }),
+    //     xhr => {
+    //       xhr.responseType = 'blob';
+    //     }
+    //   ).then()
+    //     .catch((err) => {
+    //       this.onError(err);
+    //     })
+    //     .then(() => {
+    //       this.triggertProgressBar(false);
+    //     });
       ga('send', 'event', 'ThemeConfigurator', 'Download', themeName);
     },
     onAction() {
-      this.triggertProgressBar(true);
-      const time = +new Date();
-      updateVars(this.userConfig)
-        .then(res => {
-          this.applyStyle(res, time);
-        })
-        .catch(err => {
-          this.onError(err);
-        })
-        .then(() => {
-          this.triggertProgressBar(false);
-        });
+    //   this.triggertProgressBar(true);
+    //   const time = +new Date();
+    //   updateVars(this.userConfig)
+    //     .then(res => {
+    //       this.applyStyle(res, time);
+    //     })
+    //     .catch(err => {
+    //       this.onError(err);
+    //     })
+    //     .then(() => {
+    //       this.triggertProgressBar(false);
+    //     });
     },
     onError(err) {
       let message;

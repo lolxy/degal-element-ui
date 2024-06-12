@@ -119,12 +119,13 @@
 
       &.nav-algolia-search {
         cursor: default;
+        margin-right: 20px;
       }
 
       &.lang-item,
       &:last-child {
         cursor: default;
-        margin-left: 34px;
+        // margin-left: 34px;
 
         span {
           opacity: .8;
@@ -330,6 +331,12 @@
             <router-link
               active-class="active"
               :to="`/${ lang }/component`">{{ langConfig.components }}
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link
+              active-class="active"
+              :to="`/${ lang }/degal-component`">{{ langConfig.degalComponents }}
             </router-link>
           </li>
           <!-- <li
