@@ -328,15 +328,11 @@
             </router-link>
           </li> -->
           <li class="nav-item">
-            <router-link
-              active-class="active"
-              :to="`/${ lang }/component`">{{ langConfig.components }}
+            <router-link active-class="active" :to="`/${ lang }/component`">{{ langConfig.components }}
             </router-link>
           </li>
           <li class="nav-item">
-            <router-link
-              active-class="active"
-              :to="`/${ lang }/degal-component`">{{ langConfig.degalComponents }}
+            <router-link active-class="active" :to="`/${ lang }/degal-component`">{{ langConfig.degalComponents }}
             </router-link>
           </li>
           <!-- <li
@@ -458,7 +454,7 @@
         return compoLang.filter(config => config.lang === this.lang)[0]['header'];
       },
       isComponentPage() {
-        return /^component/.test(this.$route.name);
+        return /^component|degal-component/.test(this.$route.name);
       },
       isHome() {
         return /^home/.test(this.$route.name);
